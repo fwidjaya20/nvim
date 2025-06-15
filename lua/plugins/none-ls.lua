@@ -10,7 +10,11 @@ return {
 
 			nls.setup({
 				sources = {
+					nls.builtins.code_actions.gomodifytags,
+					nls.builtins.code_actions.impl,
 					nls.builtins.completion.spell,
+					nls.builtins.formatting.gofumpt,
+					nls.builtins.formatting.goimports,
 					nls.builtins.formatting.prettier,
 					nls.builtins.formatting.stylua,
 					require("none-ls.diagnostics.eslint_d"),
