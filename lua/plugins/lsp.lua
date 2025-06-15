@@ -3,7 +3,11 @@ return {
 		"mason-org/mason.nvim",
 		opts = {
 			ensure_installed = {
+				"eslint_d",
 				"lua_ls",
+				"prettier",
+				"stylua",
+				"tailwindcss",
 				"ts_ls",
 			},
 		},
@@ -14,6 +18,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
+				"tailwindcss",
 			},
 		},
 		dependencies = {
@@ -25,6 +30,11 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
+		},
+		opts = {
+			servers = {
+				tailwindcss = {},
+			},
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
