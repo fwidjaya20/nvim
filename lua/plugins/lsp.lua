@@ -10,7 +10,7 @@ return {
 				"stylua",
 				"tailwindcss",
 				"ts_ls",
-				"golangci_lint",
+				"golangci-lint",
 			},
 		},
 	},
@@ -37,18 +37,6 @@ return {
 		},
 		opts = {
 			servers = {
-				gopls = {
-					settings = {
-						gopls = {
-							analyses = {
-								unusedparams = true,
-								useany = true,
-							},
-							usePlaceholders = true,
-							completeUnimported = true,
-						},
-					},
-				},
 				tailwindcss = {},
 			},
 		},
@@ -63,6 +51,17 @@ return {
 			vim.lsp.enable("gopls")
 			vim.lsp.config("gopls", {
 				capabilities = capabilities,
+				settings = {
+					gopls = {
+						analyses = {
+							unusedparams = true,
+							useany = true,
+						},
+						usePlaceholders = true,
+						completeUnimported = true,
+					},
+				},
+				k,
 			})
 
 			vim.lsp.enable("ts_ls")
