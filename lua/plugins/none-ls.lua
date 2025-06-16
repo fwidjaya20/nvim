@@ -13,7 +13,7 @@ return {
           nls.builtins.code_actions.gomodifytags,
           nls.builtins.code_actions.impl,
           nls.builtins.completion.spell,
-          ns.builtins.formatting.gofmt,
+          nls.builtins.formatting.gofmt,
           nls.builtins.formatting.goimports,
           nls.builtins.formatting.golines,
           nls.builtins.formatting.prettier,
