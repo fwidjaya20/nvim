@@ -61,7 +61,6 @@ return {
 						completeUnimported = true,
 					},
 				},
-				k,
 			})
 
 			vim.lsp.enable("ts_ls")
